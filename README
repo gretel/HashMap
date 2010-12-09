@@ -1,0 +1,26 @@
+HashMap provides a standardized API for working with key / value pairs.
+
+The following example demonstrates a typical client implementation of a Hashmap
+instance in which  key / value pairs are added and retrieved.
+
+import com.ericfeminella.collections.HashMap;
+import com.ericfeminella.collections.IMap;
+
+private function init() : void
+{
+    var map:IMap = new HashMap();
+    map.put("a", "value A");
+    map.put("b", "value B");
+    map.put("c", "value C");
+    map.put("x", "value X");
+    map.put("y", "value Y");
+
+    trace( map.getKeys() ); // b,x,z,a,c,y
+    trace( map.getValues() ); // value B,value X,value Z,value A,value C,value Y
+    trace( map.size() ); // 6
+}
+
+Copyright (c) 2006  Eric J. Feminella  <eric@ericfeminella.com>
+All rights reserved.
+ 
+http://code.ericfeminella.com/classes/as3/HashMap.as.html
