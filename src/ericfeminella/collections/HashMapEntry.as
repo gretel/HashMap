@@ -27,50 +27,86 @@ package com.ericfeminella.collections
 {
     /**
      *
-     * <code>IHashMapEntry</code> defines the contract for adding strongly
-     * typed entries to an <code>IMap</code> instance by providing a sealed
-     * type which defines a <code>key</code> and <code>value</code> property.
+     * <code>HashMapEntry</code> provides a strongly typed object with which
+     * objects can reference a <code>key</code> and <code>value</code> property.
      *
+     * @see com.ericfeminella.collections.IHashMapEntry
      * @see com.ericfeminella.collections.IMap#putEntry
      * @see com.ericfeminella.collections.IMap#getEntries
      *
      */
-    public interface IHashMapEntry
+    public class HashMapEntry implements IHashMapEntry
     {
         /**
          *
-         * Assigns the <code>value</code> of the <code>key</code> property.
-         *
-         * @param <code>value</code> to assign to the <code>key</code> property.
+         * Defines the reference to the <code>key</code> which is to
+         * be used as the <code>key</code> in an <code>IMap</code>
+         * implementation.
          *
          */
-        function set key(value:*) : void;
+        protected var _key:* = undefined;
 
         /**
          *
-         * Retrieves the <code>value</code> of the <code>key</code> property.
-         *
-         * @return <code>value</code> of the <code>key</code> property.
+         * Defines the reference to the <code>value</code> which is to
+         * be used as the <code>value</code> in an <code>IMap</code>
+         * implementation.
          *
          */
-        function get key() : *;
+        protected var _value:* = undefined;
 
         /**
          *
-         * Assigns the <code>value</code> of the <code>value</code> property.
-         *
-         * @param <code>value</code> to assign to the <code>value</code> property.
+         * The <code>HashMapEntry</code> constructor requires the <code>key</code>
+         * and <code>value</code> which is assigned to the <code>key</code>. The
+         * <code>key</code> and <code>value</code> equate to the <code>key</code>
+         * and <code>value</code> of an <code>IMap</code> entry.
          *
          */
-        function set value(value:*) : void;
+        public function HashMapEntry(key:* = undefined, value:* = undefined)
+        {
+            _key   = key;
+            _value = value;
+        }
 
         /**
          *
-         * Retrieves the <code>value</code> of the <code>value</code> property.
-         *
-         * @return <code>value</code> of the <code>value</code> property.
+         * @inheritDoc
          *
          */
-        function get value() : *;
+        public function get key() : *
+        {
+            return _key;
+        }
+
+        /**
+         *
+         * @inheritDoc
+         *
+         */
+        public function set key(key:*) : void
+        {
+            _key = key;
+        }
+
+        /**
+         *
+         * @inheritDoc
+         *
+         */
+        public function get value() : *
+        {
+            return _value;
+        }
+
+        /**
+         *
+         * @inheritDoc
+         *
+         */
+        public function set value(value:*) : void
+        {
+            _value = value;
+        }
     }
 }
