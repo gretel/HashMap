@@ -1,0 +1,31 @@
+<flex-config>
+	<target-player>10.1.0</target-player>
+
+	<compiler>
+
+		<source-path>
+			<path-element>src</path-element>
+		</source-path>
+
+		<incremental>true</incremental>
+
+		<library-path append="false"></library-path>
+
+		<external-library-path>
+			<path-element>${flexlib}/libs/player/10.1/playerglobal.swc</path-element>
+			<path-element>${flexlib}/libs/framework.swc</path-element>
+		</external-library-path>
+	</compiler>
+
+	<static-link-runtime-shared-libraries>false</static-link-runtime-shared-libraries>
+
+	<include-classes>
+		<class>com/ericfeminella/collections/HashMap</class>
+		<class>com/ericfeminella/collections/HashMapEntry</class>
+		<class>com/ericfeminella/collections/IHashMapEntry</class>
+		<class>com/ericfeminella/collections/IMap</class>
+	</include-classes>
+
+	<output>./build/HashMap.swc</output>
+
+</flex-config>
