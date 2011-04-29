@@ -1,5 +1,5 @@
 <flex-config>
-	<target-player>10.1.0</target-player>
+	<target-player>10.2.0</target-player>
 
 	<compiler>
 
@@ -12,7 +12,7 @@
 		<library-path append="false"></library-path>
 
 		<external-library-path>
-			<path-element>${flexlib}/libs/player/10.1/playerglobal.swc</path-element>
+			<path-element>${flexlib}/libs/player/10.2/playerglobal.swc</path-element>
 			<path-element>${flexlib}/libs/framework.swc</path-element>
 		</external-library-path>
 	</compiler>
