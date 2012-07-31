@@ -214,12 +214,14 @@ package com.ericfeminella.collections
          * </listing>
          *
          * @param The <code>key</code> in which to remove from the map.
+         * @return Removed <code>value</code>.
          *
          */
-        public function remove(key:*) : void
+        public function remove(key:*) : *
         {
-            map[ key ] = undefined;
+            var v:* = map[ key ];
             delete map[ key ];
+            return v;
         }
 
         /**
