@@ -81,9 +81,10 @@ package com.ericfeminella.collections
          * map.
          *
          * @param The <code>key</code> in which to remove from the map.
+         * @return Removed <code>value</code>.
          *
          */
-        function remove(key:*) : void;
+        function remove(key:*) : *;
 
         /**
          *
