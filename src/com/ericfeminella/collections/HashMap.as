@@ -29,7 +29,7 @@ package com.ericfeminella.collections
 
     /**
      *
-     * <code>HashMap<code> provides a standardized API for working
+     * <code>HashMap</code> provides a standardized API for working
      * with <code>key</code> / <code>value</code> pairs.
      *
      * @example The following example demonstrates a typical client
@@ -367,7 +367,7 @@ package com.ericfeminella.collections
          *
          * </listing>
          *
-         * @return <code>Array<code> of <code>key</code> identifiers.
+         * @return <code>Array</code> of <code>key</code> identifiers.
          *
          */
         public function getKeys() : Array

@@ -139,7 +139,7 @@ package com.ericfeminella.collections
          *
          * Returns each <code>key</code> defined within the map.
          *
-         * @return <code>Array<code> of <code>key</code> identifiers.
+         * @return <code>Array</code> of <code>key</code> identifiers.
          *
          */
         function getKeys() : Array;
